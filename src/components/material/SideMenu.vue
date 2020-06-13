@@ -1,0 +1,87 @@
+<template>
+  <el-menu
+    class="categories"
+    default-active="0"
+    @select="handleSelect"
+    active-text-color="red">
+    <el-menu-item index="0">
+      <i class="el-icon-menu"></i>
+      <span slot="title">全部</span>
+    </el-menu-item>
+    <el-menu-item index="1">
+      <i class="el-icon-menu"></i>
+      <span slot="title">哲学</span>
+    </el-menu-item>
+    <el-menu-item index="2">
+      <i class="el-icon-menu"></i>
+      <span slot="title">经济学</span>
+    </el-menu-item>
+    <el-menu-item index="3">
+      <i class="el-icon-menu"></i>
+      <span slot="title">法学</span>
+    </el-menu-item>
+    <el-menu-item index="4">
+      <i class="el-icon-menu"></i>
+      <span slot="title">教育学</span>
+    </el-menu-item>
+    <el-menu-item index="5">
+      <i class="el-icon-menu"></i>
+      <span slot="title">文学</span>
+    </el-menu-item>
+    <el-menu-item index="6">
+      <i class="el-icon-menu"></i>
+      <span slot="title">历史学</span>
+    </el-menu-item>
+    <el-menu-item index="7">
+      <i class="el-icon-menu"></i>
+      <span slot="title">理学</span>
+    </el-menu-item>
+    <el-menu-item index="8">
+      <i class="el-icon-menu"></i>
+      <span slot="title">工学</span>
+    </el-menu-item>
+    <el-menu-item index="9">
+      <i class="el-icon-menu"></i>
+      <span slot="title">农学</span>
+    </el-menu-item>
+    <el-menu-item index="10">
+      <i class="el-icon-menu"></i>
+      <span slot="title">医学</span>
+    </el-menu-item>
+    <el-menu-item index="11">
+      <i class="el-icon-menu"></i>
+      <span slot="title">管理学</span>
+    </el-menu-item>
+    <el-menu-item index="12">
+      <i class="el-icon-menu"></i>
+      <span slot="title">艺术学</span>
+    </el-menu-item>
+  </el-menu>
+</template>
+
+<script>
+    export default {
+        name: 'SideMenu',
+      data () {
+        return {
+          cid: ''
+        }
+      },
+      methods: {
+        handleSelect (key, keyPath) {
+          this.cid = key
+          this.$emit('indexSelect')
+        }
+      }
+    }
+</script>
+
+<style scoped>
+  .categories {
+    position: absolute;
+    margin-left: 50%;
+    left: -600px;
+    top: 100px;
+    width: 150px;
+  }
+</style>
